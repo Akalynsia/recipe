@@ -50,6 +50,11 @@ const RecipeApp = () => {
         {recipes.map((recipe, index) => (
           <div key={index} className="recipe-card">
             <h2>{recipe.recipe.label}</h2>
+            <img
+              src={recipe.recipe.image}
+              alt={recipe.recipe.label}
+              className="recipe-image"
+            />
             <ul>
               {recipe.recipe.ingredients.map((ingredient, idx) => (
                 <li key={idx}>{ingredient.text}</li>
